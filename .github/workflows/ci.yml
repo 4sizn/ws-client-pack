@@ -67,7 +67,7 @@ jobs:
       # 브라우저는 매번 받으면 40초가 그냥 나간다. playwright 버전이 바뀔 때만 다시 받게
       # 락파일 해시를 키에 넣는다.
       - name: Cache browser
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ matrix.browser }}-${{ hashFiles('bun.lock') }}
